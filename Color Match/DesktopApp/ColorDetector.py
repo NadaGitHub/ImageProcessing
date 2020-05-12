@@ -11,6 +11,7 @@ from gtts import gTTS
 
 class ColorDetector(object):
 
+        ############## define lower and upper values ##############
     def __init__(self):  
         self.black_lower = np.array([0, 0, 0], dtype="uint8")
         self.black_upper = np.array([25, 25, 25], dtype="uint8")
@@ -65,6 +66,7 @@ class ColorDetector(object):
 
         self.kernal = np.ones((5, 5), "uint8")
 
+    ############## to detect black color and draw rectangle in image ##############
     def black_detection(self, image, hsv, image_det=True):
         if image_det == False:
             black_mask = cv2.inRange(hsv, self.black_lower, self.black_upper)
@@ -103,7 +105,8 @@ class ColorDetector(object):
         
 
         return image
-
+     
+       ############## to detect white color and draw rectangle in image ##############
     def white_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -139,7 +142,8 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                 continue
         return image
-
+ 
+    ############## to detect red color and draw rectangle in image ##############
     def red_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -176,7 +180,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect lime color and draw rectangle in image ##############
     def lime_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -214,7 +219,8 @@ class ColorDetector(object):
 
 
         return image
-
+    
+    ############## to detect blue color and draw rectangle in image ##############
     def blue_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -254,7 +260,8 @@ class ColorDetector(object):
 
 
         return image
-
+    
+    ############## to detect yellow color and draw rectangle in image ##############
     def yellow_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -291,7 +298,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect cyan color and draw rectangle in image ##############
     def cyan_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -328,7 +336,8 @@ class ColorDetector(object):
 
 
         return image
-
+    
+    ############## to detect magenda color and draw rectangle in image ##############
     def magenda_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -365,7 +374,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect silver color and draw rectangle in image ##############
     def silver_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -402,7 +412,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect gray color and draw rectangle in image ##############
     def gray_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -438,7 +449,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+ 
+    ############## to detect maroon color and draw rectangle in image ##############
     def maroon_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -475,7 +487,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect olive color and draw rectangle in image ##############
     def olive_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -512,7 +525,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect green color and draw rectangle in image ##############
     def green_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -550,6 +564,7 @@ class ColorDetector(object):
         
         return image
 
+    ############## to detect purple color and draw rectangle in image ##############
     def purple_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -588,6 +603,7 @@ class ColorDetector(object):
 
         return image
 
+    ############## to detect teal color and draw rectangle in image ##############
     def teal_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -624,7 +640,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect navy color and draw rectangle in image ##############
     def navy_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -661,7 +678,8 @@ class ColorDetector(object):
                 continue
 
         return image
-
+    
+    ############## to detect skyblue color and draw rectangle in image ##############
     def skyblue_detection(self, image, hsv, image_det=True):
 
         if image_det == False:
@@ -699,6 +717,7 @@ class ColorDetector(object):
 
         return image
 
+    ############## match audio ##############
     def Match_detection(self):
         
         pygame.mixer.init()
@@ -709,7 +728,7 @@ class ColorDetector(object):
                 continue
 
         
-
+    ############## not match audio ##############
     def Not_Match_detection(self):
         
         pygame.mixer.init()
@@ -720,7 +739,7 @@ class ColorDetector(object):
                 continue
 
         
-
+    ############## suggestions colors for black  audio ##############
     def BLACK_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Black matchs with White  Green  Yellow  Red.mp3')
@@ -729,8 +748,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-
+    ############## suggestions colors for white  audio ##############
     def WHITE_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('White matchs with  Black  Red  Blue.mp3')
@@ -739,8 +757,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-
+    ############## suggestions colors for red  audio ##############
     def RED_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Red matchs with Black  Yellow  Blue  Green  Cyan  Silver  Olive  Purple.mp3')
@@ -748,9 +765,8 @@ class ColorDetector(object):
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy() == True:
                    continue
-
-        
-
+    
+    ############## suggestions colors for lime  audio ##############
     def LIME_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Lime matchs with Yellow  Green.mp3')
@@ -760,7 +776,8 @@ class ColorDetector(object):
                    continue
 
         return image
-
+    
+    ############## suggestions colors for blue  audio ##############
     def BLUE_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Blue matchs with  White  Red  Green  Gray  Magenda  Silver  Purple.mp3')
@@ -769,9 +786,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-
-     
+    ############## suggestions colors for yellow  audio ##############
     def YELLOW_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Yellow matchs with Lime  Red  Black  Gray  Cyan  Green.mp3')
@@ -780,8 +795,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+     ############## suggestions colors for cyan  audio ##############   
     def CYAN_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Cyan matchs with Yellow  Red  White  Gray.mp3')
@@ -790,8 +804,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+    ############## suggestions colors for magenda  audio ##############  
     def MAGENDA_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Magenda matchs with Green  Blue  Purple.mp3')
@@ -800,8 +813,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-    
+     ############## suggestions colors for silver  audio ##############
     def SILVER_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Sliver matchs with Green  Blue  Purple  Red.mp3')
@@ -810,8 +822,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+     ############## suggestions colors for gray  audio ##############   
     def GRAY_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Gray matchs with Yellow  Blue  Cyan  Maroon  Olive  Skyblue.mp3')
@@ -820,8 +831,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-      
-        
+    ############## suggestions colors for maroon audio ##############   
     def MAROON_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Maroon matchs with White  Gray  Teal  Olive.mp3')
@@ -830,8 +840,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+    ############## suggestions colors for olive  audio ##############   
     def OLIVE_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Olive matchs with Red  Gray  Maroon  Purple Navy.mp3')
@@ -840,7 +849,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
+     ############## suggestions colors for green  audio ##############  
     def GREEN_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Green matchs with Black Lime  Blue  Yellow  Magenda  Silver Skyblue.mp3')
@@ -849,8 +858,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+    ############## suggestions colors for purple  audio ##############   
     def PURPLE_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Purple matchs with Black  Lime  Blue  Yellow  Magenda  Silver.mp3')
@@ -859,8 +867,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+    ############## suggestions colors for teal  audio ##############  
     def TEAL_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Teal matchs with Maroon  Navy.mp3')
@@ -869,8 +876,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-     
+    ############## suggestions colors for navy  audio ##############
     def NAVY_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Navy matchs with Teal  Olive.mp3')
@@ -879,8 +885,7 @@ class ColorDetector(object):
         while pygame.mixer.music.get_busy() == True:
                    continue
 
-        
-        
+    ############## suggestions colors for skyblue  audio ##############    
     def SKYBLUE_MATCHS(self):
         pygame.mixer.init()
         pygame.mixer.music.load('Skyblue matchs with Black  Gray  Purple.mp3')
