@@ -81,8 +81,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                  x, y, w, h = cv2.boundingRect(contour)
-                 #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                 #cv2.putText(image, "BLACK", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                 image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                 cv2.putText(image, "BLACK", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
          
         ### To make audio ###
         """
@@ -120,8 +120,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "WHITE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.9, (255, 255, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "WHITE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.9, (255, 255, 255))
 
         ### To make audio ###
         """
@@ -156,8 +156,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "RED", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "RED", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -193,8 +193,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "LIME", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "LIME", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -232,8 +232,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "BLUE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.7, (255, 0, 0))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "BLUE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.7, (255, 0, 0))
 
 
         ### To make audio ###
@@ -271,8 +271,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "YELLOW", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "YELLOW", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -308,8 +308,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "CYAN/AQUA", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "CYAN/AQUA", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
         ### To make audio ###
         """
         mytext = 'CYAN'
@@ -345,8 +345,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "MAGENDA/FUCHSIA", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "MAGENDA/FUCHSIA", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -382,8 +382,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "SILVER", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "SILVER", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -419,8 +419,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "GRAY", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "GRAY", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
         ### To make audio ###
         """
         mytext = 'GRAY'
@@ -455,8 +455,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "MAROON", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "MAROON", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -492,8 +492,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "OLIVE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "OLIVE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
         
         ### To make audio ###
         """
@@ -530,7 +530,7 @@ class ColorDetector(object):
             if (area > 200):
                 x, y, w, h = cv2.boundingRect(contour)
                 image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "GREEN", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                cv2.putText(image, "GREEN", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -566,8 +566,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "PURPLE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "PURPLE", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -604,8 +604,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "TEAL", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "TEAL", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -641,8 +641,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "NAVY", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "NAVY", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
@@ -678,8 +678,8 @@ class ColorDetector(object):
             area = cv2.contourArea(contour)
             if (area > 300):
                 x, y, w, h = cv2.boundingRect(contour)
-                #image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
-                #cv2.putText(image, "skyblue", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
+                image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
+                cv2.putText(image, "skyblue", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
 
         ### To make audio ###
         """
