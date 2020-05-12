@@ -948,7 +948,7 @@ class ColorDetector(object):
             self.NAVY_MATCHS()
         if Skyblue == True or All == True:
             image = self.skyblue_detection(image, img_hsv, image_det=True)
-            self.SKYBLUE_MATCHS_MATCHS()
+            self.SKYBLUE_MATCHS()
 
 
         
