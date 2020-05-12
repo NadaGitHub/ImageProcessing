@@ -19,10 +19,10 @@ class ColorDetector(object):
         self.blue_lower = np.array([215, 100, 0], dtype="uint8")
         self.blue_upper = np.array([255, 255, 255], dtype="uint8")
         
-        self.skyblue_lower = np.array([210, 130, 60], dtype="uint8")  # skyblue(135,206,235) +-25
+        self.skyblue_lower = np.array([210, 130, 60], dtype="uint8")  
         self.skyblue_upper = np.array([255, 230, 160], dtype="uint8")
         
-        self.green_lower = np.array([0, 200, 100], dtype="uint8")  # green(0,128,0) +-25
+        self.green_lower = np.array([0, 200, 100], dtype="uint8")  
         self.green_upper = np.array([160, 255, 190], dtype="uint8")
         
         self.yellow_lower = np.array([25, 160, 230], dtype="uint8")
@@ -92,13 +92,10 @@ class ColorDetector(object):
         
         for pic, contour in enumerate(contours):
             area = cv2.contourArea(contour)
-            #print('skyblueagain')
-            #print(area)
             if (area > 20):
                 x, y, w, h = cv2.boundingRect(contour)
                 image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
                 cv2.putText(image, "skyblue", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
-                #print('skyblueagainnnnn')
 
         return image
 
@@ -114,17 +111,12 @@ class ColorDetector(object):
 
         # Tracking the Blue Color
         contours,_ = cv2.findContours(blue_mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-        #print('hiii')
         for pic, contour in enumerate(contours):
             area = cv2.contourArea(contour)
-           # print('blueagain')
-            #print(area)
             if (area > 20):
                 x, y, w, h = cv2.boundingRect(contour)
                 image = cv2.rectangle(image, (x, y), (x + w, y + h), (0, 0, 255), 2)
                 cv2.putText(image, "blue", (x, y), cv2.FONT_HERSHEY_DUPLEX, 0.5, (0, 0, 255))
-                #print('blueagainnnnn')
-
         return image
     def red_detection(self, image, hsv, image_det=True):
 
@@ -190,21 +182,13 @@ class ColorDetector(object):
     def ImageDetection(self, imagePath,pressed):
         image = cv2.imread(imagePath)
         img_hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
-        #cv2.imshow("images", image)
-        #cd=ColorDetector
-        #hsv=[109*2,255,154]
-        #x = cv2.inRange(hsv, self.black_lower, self.black_upper)
-        #length=len(xh)
         for n in range(len(xh)):
             if ((xh[n]>=0 and xh[n]<=360) and (ys[n]>=0 and ys[n]<=90) and (zv[n]>=0 and zv[n]<=90) ):
                 print('black')
                 image = self.black_detection(image, img_hsv, image_det=True)
             elif ((xh[n]>=215 and xh[n]<=255) and (ys[n]>=100 and ys[n]<=255) and (zv[n]>=0 and zv[n]<=255) ):
                 print('blue')
-                image = self.blue_detection(image, img_hsv, image_det=True)
-            #elif ((xh[n]>=210 and xh[n]<=255) and (ys[n]>=130 and ys[n]<=260) and (zv[n]>=60 and zv[n]<=160) ):
-                #print('skyblue')
-                #image = self.skyblue_detection(image, img_hsv, image_det=True)            
+                image = self.blue_detection(image, img_hsv, image_det=True)      
             elif ((xh[n]>=0 and xh[n]<=160) and (ys[n]>=200 and ys[n]<=255) and (zv[n]>=100 and zv[n]<=190) ):
                 print('green')
                 image = self.green_detection(image, img_hsv, image_det=True)
@@ -242,17 +226,12 @@ if __name__ == "__main__":
         image = cv2.imread('4.jpg')
         cv2.imshow("first", image)
         cv2.waitKey(1) & 0xFF
-        #cv2.startWindowThread()
-        #cv2.namedWindow("preview")
-        #cv2.imshow("preview", image)
         def get_pixel_colour(i_x, i_y):
             return PIL.ImageGrab.grab().load()[i_x, i_y]
     
-        #global x,y,z
         def on_click(x, y, button, pressed):
             global i,xh,ys,zv
             if pressed:
-                #cd=ColorDetector
                 i = i + 1
                 print ('Mouse clicked at ({0}, {1}) with {2}'.format(x, y, button))
                 x,y,z = get_pixel_colour(x, y)
@@ -265,7 +244,6 @@ if __name__ == "__main__":
                 ys.append(hsv_color[0][0][1])
                 zv.append(hsv_color[0][0][2])
                 print('HSV values:',hsv_color[0][0][0]*2,hsv_color[0][0][1],hsv_color[0][0][2])
-                #return x,y,z
         with Listener(on_click=on_click) as listener:
             listener.join()
         iw = Ui_ImageWindow()
